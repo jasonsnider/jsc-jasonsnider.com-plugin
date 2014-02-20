@@ -25,11 +25,11 @@
                 <strong><?php echo $latestPost['Content']['title']; ?></strong><br>
                 <?php 
                     echo $this->Text->truncate(
-                        $latestPost['Content']['body'], 
+                        strip_tags($latestPost['Content']['body']), 
                         750,
                         array(
                             'ellipsis' => '...',
-                            'exact' => true,
+                            'exact' => false,
                             'html' => true
                         )
                     ); 
