@@ -21,33 +21,23 @@
             <div class="panel-heading">
                 <h2 class="panel-title">Latest Post</h2>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" style="height: 320px; overflow: hidden;">
                 <strong><?php echo $latestPost['Content']['title']; ?></strong><br>
-                <?php 
-                    echo $this->Text->truncate(
-                        strip_tags($latestPost['Content']['body']), 
-                        650,
-                        array(
-                            'ellipsis' => '...',
-                            'exact' => false,
-                            'html' => true
-                        )
-                    ); 
-                ?>
-                <div>
-                    <?php 
-                        echo $this->Html->link(
-                             'Read More',
-                            array(
-                                'plugin'=>'contents',
-                                'controller'=>'posts',
-                                'action'=>'view',
-                                $latestPost['Content']['slug']
-                            )
-                        ); 
-                    ?>
-                </div>
+                <?php echo $latestPost['Content']['body']; ?>
             </div>
+			<div class="text-right" style="line-height: 30px; padding: 0 15px;">
+				<?php 
+					echo $this->Html->link(
+						 'Read More',
+						array(
+							'plugin'=>'contents',
+							'controller'=>'posts',
+							'action'=>'view',
+							$latestPost['Content']['slug']
+						)
+					); 
+				?>
+			</div>
         </div>
     </div>
 </div>
