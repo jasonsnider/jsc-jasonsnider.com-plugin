@@ -45,9 +45,9 @@ class JscController extends JscAppController {
         parent::beforeFilter();
         $this->Auth->allow();
         $this->Authorize->allow('*');
-        
-        $this->Meta->data();
+		
         $this->request->checkForMeta = true;
+        $this->Meta->data();
     }
 
     /**
