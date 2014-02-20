@@ -26,7 +26,7 @@
                 <?php 
                     echo $this->Text->truncate(
                         strip_tags($latestPost['Content']['body']), 
-                        700,
+                        650,
                         array(
                             'ellipsis' => '...',
                             'exact' => false,
