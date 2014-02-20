@@ -23,7 +23,17 @@
             </div>
             <div class="panel-body">
                 <strong><?php echo $latestPost['Content']['title']; ?></strong><br>
-                <?php echo $this->Text->truncate($latestPost['Content']['body'], 750); ?>
+                <?php 
+                    echo $this->Text->truncate(
+                        $latestPost['Content']['body'], 
+                        750,
+                        array(
+                            'ellipsis' => '...',
+                            'exact' => true,
+                            'html' => true
+                        )
+                    ); 
+                ?>
                 <div>
                     <?php 
                         echo $this->Html->link(
