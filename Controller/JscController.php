@@ -23,7 +23,7 @@ App::uses('Random', 'Utilities.Lib');
  * @package Contents
  */
 class JscController extends JscAppController {
-
+    
     /**
      * Jsc uses
      * -Content
@@ -33,14 +33,21 @@ class JscController extends JscAppController {
         'Content'
     );
 
+    public $components = array('Contents.Meta');
+    
     /**
      * Called before action
+     * - Sets access levels
+     * - Turns on meta data by default
      * @return void
      */
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow();
         $this->Authorize->allow('*');
+        
+        $this->Meta->data();
+        $this->request->checkForMeta = true;
     }
 
     /**
