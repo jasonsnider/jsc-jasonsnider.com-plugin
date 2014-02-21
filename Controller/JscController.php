@@ -88,9 +88,57 @@ class JscController extends JscAppController {
             'cipher',
             'salt'
         ));
-        
     }
     
+    /**
+     * Returns the hashed values of a given string
+     * @return void
+     */
+    public function random_string_generator() {
+
+        $string = false;
+        
+        if(empty($this->request->data)){
+            $this->request->data['Hash']['length'] = 24;
+            $this->request->data['Hash']['upper'] = 1;
+            $this->request->data['Hash']['lower'] = 1;
+            $this->request->data['Hash']['numeric'] = 1;
+            $this->request->data['Hash']['special'] = 1;
+            $this->request->data['Hash']['disambiguate'] = 1;
+        }
+        
+        $length = empty($this->request->data['Hash']['length'])?0:$this->request->data['Hash']['length'];
+        $upper = empty($this->request->data['Hash']['upper'])?false:'u';
+        $lower = empty($this->request->data['Hash']['lower'])?false:'l';
+        $numeric = empty($this->request->data['Hash']['numeric'])?false:'n';
+        $special = empty($this->request->data['Hash']['special'])?false:'s';
+        $disambiguate = empty($this->request->data['Hash']['disambiguate'])?false:'d';
+
+        $alphabet = $upper.$lower.$numeric.$special.$disambiguate;
+        $string = Random::random($alphabet, $length);
+        
+        
+        $this->set(compact(
+            'string'
+        ));
+    }
+
+    /**
+     * Returns the hashed values of a given string
+     * @return void
+     */
+    public function hash_generator() {
+        
+        $this->request->title = 'Hash Generator'; 
+        
+        $algos = hash_algos();
+        $numOfAlgos = count($algos);
+        
+        $this->set(compact(
+            'algos',
+            'numOfAlgos'
+        ));
+    }
 
     /**
      * The home page for jasonsnider.com
