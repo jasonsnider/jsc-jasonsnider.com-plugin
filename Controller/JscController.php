@@ -81,6 +81,9 @@ class JscController extends JscAppController {
      * @return void
      */
     public function cakephp_salt_and_cipher_generator() {
+        
+        $this->request->title = 'CakePHP Salt and Cipher Generator'; 
+        
         $cipher = Random::random('CAKECIPHER');
         $salt = Random::random('CAKESALT');
         
@@ -95,6 +98,8 @@ class JscController extends JscAppController {
      * @return void
      */
     public function random_string_generator() {
+        
+        $this->request->title = 'Random String Generator'; 
 
         $string = false;
         

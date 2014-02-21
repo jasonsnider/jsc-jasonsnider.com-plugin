@@ -1,3 +1,5 @@
+<h1><?php echo $this->request->title; ?></h1>
+<p>Creates a configurable pseudo-random string.</p>
 <div class="row">
     <div class="col-md-2">
         <?php
@@ -22,13 +24,7 @@
                     'type'=>'text'
                 )
             );
-            /*
-             * @param integer $length The length of the string
-             * @param boolean $upper Add the A-Z character set
-             * @param boolean $lower Add the a-z character set
-             * @param boolean $numeric Add the numeric character set
-             * @param boolean $special Add the special character set
-             * @param boolean $disambiguate Removes potentially ambiguous characters from the alphabets */
+
             echo $this->Form->input(
                 'upper', 
                 array(
