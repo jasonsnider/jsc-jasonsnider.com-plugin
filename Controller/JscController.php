@@ -159,6 +159,24 @@ class JscController extends JscAppController {
      */
     public function who_is_this(){
         $this->request->title = 'Who is This?';
+		
+		$data = array();
+
+		if(!empty($this->request->data)){
+			//Use IP validation to determine what type of look up to perform
+			if(Validation::ip($this->request->data['WhoIs']['target'], 'both')){
+				//Is an IP address
+				$data['gethostbyaddr'] = gethostbyaddr($this->request->data['WhoIs']['target']);
+			}else{
+				//Is a host name
+				$data['gethostbyname'] = gethostbyname($this->request->data['WhoIs']['target']);
+				$data['gethostbynamel'] = gethostbynamel($this->request->data['WhoIs']['target']);
+			}
+
+		}
+		
+		$this->set(compact('data'));
+		
     }
 
     /**
