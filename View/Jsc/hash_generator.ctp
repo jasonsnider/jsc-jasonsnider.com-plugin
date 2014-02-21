@@ -44,7 +44,7 @@
         <div class="panel-heading">
             <h2 class="panel-title">Algorithm: <?php echo $algos[$i]; ?></h2>
         </div>
-        <div class="panel-body" style="word-break: break-all;">
+        <div class="panel-body text-break">
             <?php echo hash($algos[$i], $this->request->data['Hash']['hash']); ?>
         </div>
     </div>

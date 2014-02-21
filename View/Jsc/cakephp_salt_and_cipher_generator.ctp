@@ -6,16 +6,16 @@
     <div class="panel-heading">
         <h2 class="panel-title">Psuedo-Random Salt for CakePHP</h2>
     </div>
-    <div class="panel-body" style="word-break: break-all;">
+    <div class="panel-body text-break">
         <?php echo $salt; ?>
     </div>
 </div>
 
-<div class="panel panel-info">
+<div class="panel panel-default">
     <div class="panel-heading">
         <h2 class="panel-title">Psuedo-Random Cipher for CakePHP</h2>
     </div>
-    <div class="panel-body" style="word-break: break-all;">
+    <div class="panel-body">
         <?php echo $cipher; ?>
     </div>
 </div>

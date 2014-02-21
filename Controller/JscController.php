@@ -144,6 +144,22 @@ class JscController extends JscAppController {
             'numOfAlgos'
         ));
     }
+    
+    /**
+     * A utilitity for showing meta data about a specific visitor
+     * @return void
+     */
+    public function who_am_i(){
+        $this->request->title = 'Who Am I?';
+    }
+    
+    /**
+     * Display information about a target location
+     * @return void
+     */
+    public function who_is_this(){
+        $this->request->title = 'Who is This?';
+    }
 
     /**
      * The home page for jasonsnider.com

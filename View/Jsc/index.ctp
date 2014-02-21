@@ -12,6 +12,14 @@ $utils = array(
     'random_string_generator'=>array(
         'title'=>'Random String Generator',
         'description'=>'Generates psudo-random strings based on user supplied values.'
+    ),
+    'who_am_i'=>array(
+        'title'=>'Who Am I',
+        'description'=>'This is who your seen to ISP\'s and websites.'
+    ),
+    'who_is_this'=>array(
+        'title'=>'Who is This',
+        'description'=>'Returns information about a gicen location on the web.'
     )
 );
 

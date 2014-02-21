@@ -104,7 +104,7 @@
             <div class="panel-heading">
                 <h2 class="panel-title">Your pseudo-random string</h2>
             </div>
-            <div class="panel-body" style="word-break: break-all;">
+            <div class="panel-body text-break">
                 <?php echo $string; ?>
             </div>
         </div>
