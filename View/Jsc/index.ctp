@@ -19,7 +19,7 @@ $utils = array(
     ),
     'who_is_this'=>array(
         'title'=>'Who is This',
-        'description'=>'Returns information about a gicen location on the web.'
+        'description'=>'Returns information about a given location on the web.'
     )
 );
 
