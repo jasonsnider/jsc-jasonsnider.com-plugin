@@ -1,5 +1,8 @@
 <h1><?php echo $this->request->title; ?></h1>
-<p>This page uses PHP's hash_algos() and hash() methods to return an array of hashes for a given string.</p>
+<p>
+    This page uses PHP's <a href="http://www.php.net/manual/en/function.hash-algos.php">hash_algos()</a> and 
+    <a href="http://www.php.net/manual/en/function.hash.php">hash()</a> methods to return an array of hashes for a 
+    given string.</p>
 <?php
     echo $this->Form->create(
         'Hash', 
