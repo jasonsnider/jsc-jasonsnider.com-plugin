@@ -1,21 +1,37 @@
 <div class="row">
-    <div class="jumbotron welcome-block col-md-8">
-        <h1>Hi, I'm Jason Snider</h1>
-        <p class="lead">
-            a full stack web developer,
-            designer,
-            systems architect,
-            security enthusiast,
-            Linux aficionado,
-            open source advocate,
-            sys admin,
-            business analyst,
-            project manager,
-            researcher and marketer.
-            I'm a senior developer at MicroTrain Technologies
-            and the lead developer for TheProfessional.Me
-        </p>
+        
+    <div class="col-md-8">
+        <div class="hi-im-jason" style="height: 393px; overflow: hidden;">
+            <h1>
+                <img class="img-circle" src="http://www.gravatar.com/avatar/57dd069b73a149098c4865f8f5813303.png"></a>
+                Hi, I'm Jason Snider
+            </h1>
+            <div class="lead clearfix">
+                a full stack web developer,
+                designer,
+                systems architect,
+                security enthusiast,
+                Linux aficionado,
+                open source advocate,
+                sys admin,
+                business analyst,
+                project manager,
+                researcher and marketer.
+                I'm a senior developer at MicroTrain Technologies
+                and the lead developer for TheProfessional.Me
+                
+                <div class="icons text-right">
+                    <a href="http://www.linkedin.com/in/jdsnider" class="icon icon-linkedin"></a>
+                    <a href="https://twitter.com/jason_snider" class="icon icon-twitter"></a>
+                    <a href="https://plus.google.com/+JasonSnider?rel=author" class="icon icon-google-plus"></a>
+                    <a href="https://github.com/jasonsnider" class="icon icon-github-alt"></a>
+                    <a href="http://www.flickr.com/photos/jason-snider/" class="icon icon-flickr"></a>
+                </div>
+            
+            </div>
+        </div>
     </div>
+    
     <div class="col-md-4">
         <div class="panel panel-success clearfix" style="height: 393px; overflow: hidden;">
             <div class="panel-heading">
