@@ -3,7 +3,7 @@
     <div class="col-md-8">
         <div class="hi-im-jason" style="height: 393px; overflow: hidden;">
             <h1>
-                <img class="img-circle" src="http://www.gravatar.com/avatar/57dd069b73a149098c4865f8f5813303.png"></a>
+                <img class="img-circle" src="https://www.gravatar.com/avatar/57dd069b73a149098c4865f8f5813303.png"></a>
                 Hi, I'm Jason Snider
             </h1>
             <div class="lead clearfix">
