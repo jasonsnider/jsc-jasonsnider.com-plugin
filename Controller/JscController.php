@@ -170,7 +170,7 @@ class JscController extends JscAppController {
 				$data['gethostbyaddr'] = gethostbyaddr($this->request->data['WhoIs']['target']);
 				
 				//Traceroute
-				$traceRoute = shell_exec(escapeshellcmd ("traceroute {$this->request->data['WhoIs']['target']}"));
+				$traceRoute = shell_exec(escapeshellcmd("traceroute {$this->request->data['WhoIs']['target']}"));
 				$data['traceRoute'] = $traceRoute;
 				
 			}elseif(Validation::url($this->request->data['WhoIs']['target'])){
@@ -179,7 +179,7 @@ class JscController extends JscAppController {
 				$data['gethostbynamel'] = gethostbynamel($this->request->data['WhoIs']['target']);
 			
 				//Traceroute
-				$traceRoute = shell_exec(escapeshellcmd ("traceroute {$this->request->data['WhoIs']['target']}"));
+				$traceRoute = shell_exec(escapeshellcmd("traceroute {$this->request->data['WhoIs']['target']}"));
 				$data['traceRoute'] = $traceRoute;
 
 				//Whois

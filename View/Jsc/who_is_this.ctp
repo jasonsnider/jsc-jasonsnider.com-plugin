@@ -35,7 +35,18 @@
     echo $this->Form->end();
 
 if(!empty($data)): ?>
-	<p>For now it's just a simple var dump of the output.</p>
-	<pre><?php debug($data); ?></pre>
+	<h2>Host Details</h2>
+	<pre><code>Host Address: <?php echo (!empty($data['gethostbyaddr'])?$data['gethostbyaddr']:'N/A') . "\n"; ?>
+Host Name: <?php echo $data['gethostbyname'] . "\n"; ?>
+Host Name List: 
+<?php for($i=0; $i<count($data['gethostbynamel']); $i++): ?>
+<?php echo $data['gethostbynamel'][$i]; echo $i < count($data['gethostbynamel'])?"\n":''; ?>
+<?php endfor; ?></code></pre>
+
+	<h2>Traceroute output</h2>
+	<pre><code><?php echo $data['traceRoute']; ?></code></pre>
+
+	<h2>Whois Record</h2>
+	<pre><code><?php echo $data['whois']; ?></code></pre>
 <?php endif;
 	
