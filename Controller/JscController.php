@@ -163,16 +163,31 @@ class JscController extends JscAppController {
 		$data = array();
 
 		if(!empty($this->request->data)){
+			
 			//Use IP validation to determine what type of look up to perform
 			if(Validation::ip($this->request->data['WhoIs']['target'], 'both')){
 				//Is an IP address
 				$data['gethostbyaddr'] = gethostbyaddr($this->request->data['WhoIs']['target']);
-			}else{
+				
+				//Traceroute
+				$traceRoute = shell_exec(escapeshellcmd ("traceroute {$this->request->data['WhoIs']['target']}"));
+				$data['traceRoute'] = $traceRoute;
+				
+			}elseif(Validation::url($this->request->data['WhoIs']['target'])){
 				//Is a host name
 				$data['gethostbyname'] = gethostbyname($this->request->data['WhoIs']['target']);
 				$data['gethostbynamel'] = gethostbynamel($this->request->data['WhoIs']['target']);
-			}
+			
+				//Traceroute
+				$traceRoute = shell_exec(escapeshellcmd ("traceroute {$this->request->data['WhoIs']['target']}"));
+				$data['traceRoute'] = $traceRoute;
 
+				//Whois
+				$whois = shell_exec("whois {$this->request->data['WhoIs']['target']}");
+				$data['whois'] = $whois;
+			}else{
+				die('Invalid format');
+			}
 		}
 		
 		$this->set(compact('data'));

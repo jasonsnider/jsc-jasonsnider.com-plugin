@@ -36,6 +36,6 @@
 
 if(!empty($data)): ?>
 	<p>For now it's just a simple var dump of the output.</p>
-	<pre><?php var_dump($data); ?></pre>
+	<pre><?php debug($data); ?></pre>
 <?php endif;
 	
