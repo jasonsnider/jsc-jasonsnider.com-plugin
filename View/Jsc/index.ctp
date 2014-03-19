@@ -17,9 +17,9 @@ $utils = array(
         'title'=>'Who Am I',
         'description'=>'This is who your seen to ISP\'s and websites.'
     ),
-    'who_is_this'=>array(
-        'title'=>'Who is This',
-        'description'=>'Returns information about a given location on the web.'
+    'domain_and_ip_analysis'=>array(
+        'title'=>'Host and IP Analysis',
+        'description'=>'Returns information about a Ip address and/or domain name.'
     )
 );
 

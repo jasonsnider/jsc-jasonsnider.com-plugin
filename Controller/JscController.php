@@ -152,13 +152,13 @@ class JscController extends JscAppController {
     public function who_am_i(){
         $this->request->title = 'Who Am I?';
     }
-    
+	
     /**
      * Display information about a target location
      * @return void
      */
-    public function who_is_this(){
-        $this->request->title = 'Who is This?';
+    public function domain_and_ip_analysis(){
+        $this->request->title = 'Domain and IP Analysis';
 		
 		$data = array();
 
