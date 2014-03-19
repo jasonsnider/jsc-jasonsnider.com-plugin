@@ -18,7 +18,7 @@ $utils = array(
         'description'=>'This is who your seen to ISP\'s and websites.'
     ),
     'domain_and_ip_analysis'=>array(
-        'title'=>'Host and IP Analysis',
+        'title'=>'Domain and IP Analysis',
         'description'=>'Returns information about a Ip address and/or domain name.'
     )
 );
