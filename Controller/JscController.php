@@ -16,6 +16,7 @@
  */
 App::uses('JscAppController', 'Jsc.Controller');
 App::uses('Random', 'Utilities.Lib');
+App::uses('Post', 'Contents.Model');
 
 /**
  * Provides a post-centric controler for contents
@@ -26,11 +27,11 @@ class JscController extends JscAppController {
     
     /**
      * Jsc uses
-     * -Content
+     * -Post
      * @var array
      */
     public $uses = array(
-        'Content'
+		'Contents.Post'
     );
 
     public $components = array('Contents.Meta');
@@ -60,16 +61,7 @@ class JscController extends JscAppController {
      * @return void
      */
     public function home() {
-        $latestPost = $this->Content->find(
-            'first',
-            array(
-                'conditions'=>array(
-                    'Content.content_type'=>'post'
-                ),
-                'contain'=>array(),
-                'order'=>'Content.created DESC'
-            )
-        );
+        $latestPost = $this->Post->fetchLatest();
         
         $this->set(compact(
             'latestPost'

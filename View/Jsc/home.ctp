@@ -38,8 +38,8 @@
                 <h2 class="panel-title">Latest Post</h2>
             </div>
             <div class="panel-body" style="height: 320px; overflow: hidden;">
-                <strong><?php echo $latestPost['Content']['title']; ?></strong><br>
-                <?php echo $latestPost['Content']['body']; ?>
+                <strong><?php echo $latestPost['Post']['title']; ?></strong><br>
+                <?php echo $latestPost['Post']['body']; ?>
             </div>
 			<div class="text-right" style="line-height: 30px; padding: 0 15px;">
 				<?php 

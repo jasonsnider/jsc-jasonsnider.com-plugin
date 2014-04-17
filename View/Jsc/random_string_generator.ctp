@@ -85,7 +85,6 @@
                 )
             ); 
 
-
             echo $this->Form->submit(
                  __d('contents', 'Submit'), 
                  array(
@@ -95,6 +94,7 @@
                      'class'=>'btn btn-primary'
                  )
              ); 
+			
             echo $this->Form->end();
         ?>
     </div>
