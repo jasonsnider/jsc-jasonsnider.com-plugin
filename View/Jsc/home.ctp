@@ -49,7 +49,7 @@
 							'plugin'=>'contents',
 							'controller'=>'posts',
 							'action'=>'view',
-							$latestPost['Content']['slug']
+							$latestPost['Post']['slug']
 						)
 					); 
 				?>
