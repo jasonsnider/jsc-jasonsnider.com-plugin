@@ -185,11 +185,4 @@ class JscController extends JscAppController {
 		$this->set(compact('data'));
 		
     }
-
-    /**
-     * The home page for jasonsnider.com
-     * @return void
-     */
-    public function parbake() {}
-
 }
