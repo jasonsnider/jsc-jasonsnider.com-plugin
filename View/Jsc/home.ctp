@@ -62,7 +62,7 @@
     <div class="col-md-4">
         <div class="panel panel-success">
             <div class="panel-heading">
-                <h2 class="panel-title">The Parbake Project</h2>
+                <h2 class="panel-title">JSC</h2>
             </div>
             <div class="panel-body">
                 <p>A project kickstarter built on top of CakePHP.</p>
@@ -71,7 +71,7 @@
                 <?php 
                     echo $this->Html->link(
                         '<span class=""></span> Find out more!<br><small>...</small>',
-                        '/parbake',
+                        '/jsc',
                         array(
                             'escape'=>false,
                             'class'=>'btn btn-success'

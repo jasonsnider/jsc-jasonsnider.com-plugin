@@ -1,8 +1,8 @@
 <?php
 /**
- * Provides a post-centric controler for contents
+ * JSC Controller
  *
- * Parbake (http://jasonsnider.com/parbake)
+ * JSC (http://jasonsnider.com/jsc)
  * Copyright 2013, Jason D Snider. (http://jasonsnider.com)
  *
  * Licensed under The MIT License
@@ -19,7 +19,7 @@ App::uses('Random', 'Utilities.Lib');
 App::uses('Post', 'Contents.Model');
 
 /**
- * Provides a post-centric controler for contents
+ * JSC Controller
  * @author Jason D Snider <jason@jasonsnider.com>
  * @package Contents
  */

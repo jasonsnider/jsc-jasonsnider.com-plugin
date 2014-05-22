@@ -2,7 +2,7 @@
 /**
  * Settings required for the users controller
  *
- * Parbake (http://jasonsnider.com)
+ * JSC (http://jasonsnider.com)
  * Copyright 2012-2014, Jason D Snider. (http://jasonsnider.com)
  *
  * Licensed under The MIT License
