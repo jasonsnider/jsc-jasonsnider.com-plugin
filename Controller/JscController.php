@@ -63,8 +63,22 @@ class JscController extends JscAppController {
     public function home() {
         $latestPost = $this->Post->fetchLatest();
         
+		$randomPosts = $this->Post->find(
+			'all', 
+			array( 
+			'fields'=>array(
+				'title',
+				'slug'
+			),
+			'conditions' => array('Post.content_status' => 'published'), 
+			'order' => 'rand()',
+			'limit' => 6,
+			)
+		);
+		
         $this->set(compact(
-            'latestPost'
+            'latestPost',
+			'randomPosts'
         ));
     }
 
