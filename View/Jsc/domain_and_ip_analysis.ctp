@@ -1,4 +1,3 @@
-<h1><?php echo $this->request->title; ?></h1>
 <?php
     echo $this->Form->create(
         'WhoIs', 

@@ -1,4 +1,3 @@
-<h1><?php echo $this->request->title; ?></h1>
 <p>Creates a configurable pseudo-random string.</p>
 <div class="row">
     <div class="col-md-2">

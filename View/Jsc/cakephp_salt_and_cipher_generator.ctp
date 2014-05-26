@@ -1,4 +1,3 @@
-<h1><?php echo $this->request->title; ?></h1>
 <p>
     This utility creates psuedo-random salt and cipher values for newly deployed CakePHP applications.
 </p>

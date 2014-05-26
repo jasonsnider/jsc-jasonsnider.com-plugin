@@ -1,4 +1,3 @@
-<h1>Utilities</h1>
 <?php 
 $utils = array(
     'cakephp_salt_and_cipher_generator'=>array(
