@@ -22,11 +22,12 @@ $utils = array(
     )
 );
 
-?>
-
-<?php foreach($utils as $key=>$value): ?>
-    <div class="well well-sm">
-        <strong><?php echo $this->Html->link($value['title'], "/jsc/jsc/{$key}"); ?></strong>
-        <div><?php echo $value['description']; ?></div>
-    </div>
-<?php endforeach;
+foreach($utils as $key=>$value): 
+	
+	echo $this->Html->div(
+		'well well-sm',
+		$this->Html->tag('strong', $this->Html->link($value['title'], "/jsc/jsc/{$key}"))
+		. $this->Html->div(null, $value['description'])
+	);
+		
+endforeach;

@@ -47,7 +47,6 @@ class JscController extends JscAppController {
         $this->Auth->allow();
         $this->Authorize->allow('*');
 		
-        $this->request->checkForMeta = true;
         $this->Meta->data();
     }
 

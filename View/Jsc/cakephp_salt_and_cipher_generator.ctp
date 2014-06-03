@@ -14,7 +14,7 @@
     <div class="panel-heading">
         <h2 class="panel-title">Psuedo-Random Cipher for CakePHP</h2>
     </div>
-    <div class="panel-body">
+    <div class="panel-body text-break">
         <?php echo $cipher; ?>
     </div>
 </div>
