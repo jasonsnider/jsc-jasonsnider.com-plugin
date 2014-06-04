@@ -1,4 +1,5 @@
-<p>Creates a configurable pseudo-random string.</p>
+<p>Creates a configurable pseudo-random string. This can be used for creating passwords, WiFi ciphers or anything else 
+	that may benefit from pseudo-random strings.</p>
 <div class="row">
     <div class="col-md-2">
         <?php

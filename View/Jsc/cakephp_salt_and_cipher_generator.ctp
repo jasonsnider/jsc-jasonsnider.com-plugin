@@ -1,6 +1,4 @@
-<p>
-    This utility creates psuedo-random salt and cipher values for newly deployed CakePHP applications.
-</p>
+<p>This utility creates psuedo-random salt and cipher values for newly deployed CakePHP applications.</p>
 <div class="panel panel-default">
     <div class="panel-heading">
         <h2 class="panel-title">Psuedo-Random Salt for CakePHP</h2>

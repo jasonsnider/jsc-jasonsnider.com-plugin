@@ -1,3 +1,4 @@
+<p>Returns information about a given domain or IP address.</p>
 <?php
     echo $this->Form->create(
         'WhoIs', 
