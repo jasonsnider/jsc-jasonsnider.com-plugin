@@ -47,5 +47,17 @@ Host Name List:
 
 	<h2>Whois Record</h2>
 	<pre><code><?php echo $data['whois']; ?></code></pre>
-<?php endif;
+<?php endif; ?>
+
+<aside class="text-center well well-sm well-trans">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Leaderboard -->
+	<ins class="adsbygoogle"
+		 style="display:inline-block;width:728px;height:90px"
+		 data-ad-client="ca-pub-2297949586762275"
+		 data-ad-slot="3778634944"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</aside>
 	
