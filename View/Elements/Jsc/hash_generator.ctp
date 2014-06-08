@@ -1,13 +1,11 @@
-<div class="panel panel-default">
+<aside>
 	<?php if(!empty($utils)): ?>
-		<div class="panel-heading">
-			<?php echo $this->Html->link('Utilities', '/jsc'); ?>
-		</div>
-		<ul class="nav nav-list">
+		<h4><?php echo $this->Html->link('Utilities', '/jsc'); ?></h4>
+		<ul>
 			<?php foreach($utils as $key => $value): ?>
 				<li><?php echo $this->Html->link($value['title'], "/jsc/jsc/{$key}"); ?></li>
 			<?php endforeach; ?>
 		</ul>
 
 	<?php endif; ?>
-</div>
+</aside>
