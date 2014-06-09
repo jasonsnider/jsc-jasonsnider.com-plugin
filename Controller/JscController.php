@@ -102,7 +102,9 @@ class JscController extends JscAppController {
 				'title',
 				'slug'
 			),
-			'conditions' => array('Post.content_status' => 'published'), 
+			'conditions' => array(
+				'Post.content_status' => 'published'
+			), 
 			'order' => 'rand()',
 			'limit' => 6,
 			)
