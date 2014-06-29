@@ -14,7 +14,7 @@
  * @author Jason D Snider <jason@jasonsnider.com>
  * @package       Users
  */
-App::uses('JscAppController', 'Jsc.Controller');
+App::uses('JasonSniderAppController', 'JasonSnider.Controller');
 App::uses('Random', 'Utilities.Lib');
 App::uses('Post', 'Contents.Model');
 
@@ -23,7 +23,7 @@ App::uses('Post', 'Contents.Model');
  * @author Jason D Snider <jason@jasonsnider.com>
  * @package Contents
  */
-class JscController extends JscAppController {
+class JasonSniderController extends JasonSniderAppController {
     
     /**
      * Jsc uses
