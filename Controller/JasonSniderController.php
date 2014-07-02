@@ -15,7 +15,7 @@
  * @package       Users
  */
 App::uses('JasonSniderAppController', 'JasonSnider.Controller');
-App::uses('Random', 'Utilities.Lib');
+App::uses('Random', 'Jsc.Lib');
 App::uses('Post', 'Contents.Model');
 
 /**
@@ -78,7 +78,7 @@ class JasonSniderController extends JasonSniderAppController {
         $this->Auth->allow();
         $this->Authorize->allow('*');
 		
-        $this->Meta->data();
+        $this->Meta->data(); //JscAppController?
 		
 		$this->set('utils', $this->utils);
     }

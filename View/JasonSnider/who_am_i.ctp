@@ -29,12 +29,12 @@
 </p>
 
 <?php for($i=0; $i<count($data); $i++): ?>
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h2 class="panel-title"><?php echo $data[$i]['title']; ?></h2>
-    </div>
-    <div class="panel-body text-break"><?php echo $data[$i]['value']; ?></div>
-</div>
+<section>
+    <header>
+        <h2><?php echo $data[$i]['title']; ?></h2>
+    </header>
+    <div class="text-break"><?php echo $data[$i]['value']; ?></div>
+</section>
 <?php endfor; ?>
 
 <aside class="text-center well well-sm well-trans">

@@ -7,14 +7,7 @@
         'Hash', 
         array(
             'url'=>$this->here,
-            'role'=>'form',
-            'inputDefaults'=>array(
-                'div'=>array(
-                    'class'=>'form-group'
-                ),
-                'class'=>'form-control clearfix',
-                'required'=>false
-            )
+            'role'=>'form'
         )
     );
 
@@ -28,32 +21,24 @@
         )
     );
     
-    echo $this->Form->submit(
-         __d('contents', 'Submit'), 
-         array(
-             'div'=>array(
-                 'class'=>'form-group clearfix'
-             ),
-             'class'=>'btn btn-primary pull-right'
-         )
-     ); 
+    echo $this->Form->submit(__d('contents', 'Submit')); 
     echo $this->Form->end();
 ?>
 
 <?php if(!empty($this->request->data)): ?>
     <?php for($i=0; $i<$numOfAlgos; $i++): ?>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h2 class="panel-title">Algorithm: <?php echo $algos[$i]; ?></h2>
-        </div>
-        <div class="panel-body text-break">
+    <section>
+        <header>
+            <h2>Algorithm: <?php echo $algos[$i]; ?></h2>
+        </header>
+        <div class="text-break">
             <?php echo hash($algos[$i], $this->request->data['Hash']['hash']); ?>
         </div>
-    </div>
+    </section>
     <?php endfor; ?>
 <?php endif; ?>
 
-<aside class="text-center well well-sm well-trans">
+<aside class="ad">
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- Leaderboard -->
 	<ins class="adsbygoogle"

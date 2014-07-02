@@ -4,15 +4,8 @@
         'WhoIs', 
         array(
             'url'=>$this->here,
-            'role'=>'form',
-            'inputDefaults'=>array(
-                'div'=>array(
-                    'class'=>'form-group'
-                ),
-                'class'=>'form-control clearfix',
-                'required'=>false
-            )
-        )
+            'role'=>'form'
+		)
     );
 
     echo $this->Form->input(
@@ -25,11 +18,7 @@
     echo $this->Form->submit(
          __d('contents', 'Submit'), 
          array(
-             'div'=>array(
-                 'class'=>'form-group clearfix text-right'
-             ),
-			 'before'=>'Please be patient, this will probably take a while.&nbsp;',
-             'class'=>'btn btn-primary'
+			 'before'=>'Please be patient, this will probably take a while.&nbsp;'
          )
      ); 
     echo $this->Form->end();
@@ -50,7 +39,7 @@ Host Name List:
 	<pre><code><?php echo $data['whois']; ?></code></pre>
 <?php endif; ?>
 
-<aside class="text-center well well-sm well-trans">
+<aside class="ad">
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- Leaderboard -->
 	<ins class="adsbygoogle"

@@ -1,23 +1,23 @@
 <p>This utility creates psuedo-random salt and cipher values for newly deployed CakePHP applications.</p>
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h2 class="panel-title">Psuedo-Random Salt for CakePHP</h2>
-    </div>
-    <div class="panel-body text-break">
+<section>
+    <header>
+        <h2>Psuedo-Random Salt for CakePHP</h2>
+    </header>
+    <div class="text-break">
         <?php echo $salt; ?>
     </div>
-</div>
+</section>
 
-<div class="panel panel-default">
-    <div class="panel-heading">
+<section>
+    <header>
         <h2 class="panel-title">Psuedo-Random Cipher for CakePHP</h2>
-    </div>
-    <div class="panel-body text-break">
+    </header>
+    <div class="text-break">
         <?php echo $cipher; ?>
     </div>
-</div>
+</section>
 
-<aside class="text-center well well-sm well-trans">
+<aside class="ad">
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- Leaderboard -->
 	<ins class="adsbygoogle"
