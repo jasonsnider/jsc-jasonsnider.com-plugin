@@ -1,7 +1,7 @@
 <?php
  $data = array(
      array(
-         'title'=>'Your IP Adrress',
+         'title'=>'Your IP Address',
          'value'=>$_SERVER['REMOTE_ADDR']
      ),
      array(
@@ -29,15 +29,13 @@
 </p>
 
 <?php for($i=0; $i<count($data); $i++): ?>
-<section>
-    <header>
-        <h2><?php echo $data[$i]['title']; ?></h2>
-    </header>
-    <div class="text-break"><?php echo $data[$i]['value']; ?></div>
-</section>
+
+	<?php echo $data[$i]['title']; ?>
+	<div class="answer"><?php echo $data[$i]['value']; ?></div>
+	
 <?php endfor; ?>
 
-<aside class="text-center well well-sm well-trans">
+<aside class="ad">
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- Leaderboard -->
 	<ins class="adsbygoogle"

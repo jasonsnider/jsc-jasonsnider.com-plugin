@@ -7,7 +7,8 @@
         'Hash', 
         array(
             'url'=>$this->here,
-            'role'=>'form'
+            'role'=>'form',
+			'class'=>'default'
         )
     );
 
@@ -27,14 +28,10 @@
 
 <?php if(!empty($this->request->data)): ?>
     <?php for($i=0; $i<$numOfAlgos; $i++): ?>
-    <section>
-        <header>
-            <h2>Algorithm: <?php echo $algos[$i]; ?></h2>
-        </header>
-        <div class="text-break">
-            <?php echo hash($algos[$i], $this->request->data['Hash']['hash']); ?>
-        </div>
-    </section>
+		Algorithm: <?php echo $algos[$i]; ?></h2>
+		<div class="answer">
+			<?php echo hash($algos[$i], $this->request->data['Hash']['hash']); ?>
+		</div>
     <?php endfor; ?>
 <?php endif; ?>
 

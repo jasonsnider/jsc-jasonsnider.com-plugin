@@ -1,118 +1,34 @@
 <p>Creates a configurable pseudo-random string. This can be used for creating passwords, WiFi ciphers or anything else 
 	that may benefit from pseudo-random strings.</p>
 <div class="row">
-    <div class="col-md-2">
-        <?php
-            echo $this->Form->create(
-                'Hash', 
-                array(
-                    'url'=>$this->here,
-                    'role'=>'form',
-                    'inputDefaults'=>array(
-                        'div'=>array(
-                            'class'=>'form-group'
-                        ),
-                        'class'=>'form-control clearfix',
-                        'required'=>false
-                    )
-                )
-            );
+	<?php
+		echo $this->Form->create(
+			'Hash', 
+			array(
+				'url'=>$this->here,
+				'role'=>'form',
+				'class'=>'default'
+			)
+		);
 
-            echo $this->Form->input(
-                'length', 
-                array(
-                    'type'=>'text'
-                )
-            );
+		echo $this->Form->input('length', array('type'=>'text')); 
+		echo $this->Form->input('upper', array('type' => 'checkbox')); 
+		echo $this->Form->input('lower', array('type' => 'checkbox')); 
+		echo $this->Form->input('numeric', array('type' => 'checkbox')); 
+		echo $this->Form->input('special', array('type' => 'checkbox')); 
+		echo $this->Form->input('disambiguate', array('type' => 'checkbox')); 
+		echo $this->Form->submit(__('Submit')); 
+		echo $this->Form->end();
+	?>
 
-            echo $this->Form->input(
-                'upper', 
-                array(
-                    'type' => 'checkbox',
-                    'div'=>array('class'=>'checkbox'),
-                    'class'=>false,
-                    'label'=>array(
-                        'class'=>false
-                    )
-                )
-            );
+	<?php if($string): ?>
+		Your pseudo-random string
+		<div class="answer"><?php echo $string; ?></div>
+	<?php endif; ?>
 
-            echo $this->Form->input(
-                'lower', 
-                array(
-                    'type' => 'checkbox',
-                    'div'=>array('class'=>'checkbox'),
-                    'class'=>false,
-                    'label'=>array(
-                        'class'=>false
-                    )
-                )
-            );
-
-            echo $this->Form->input(
-                'numeric', 
-                array(
-                    'type' => 'checkbox',
-                    'div'=>array('class'=>'checkbox'),
-                    'class'=>false,
-                    'label'=>array(
-                        'class'=>false
-                    )
-                )
-            );
-
-            echo $this->Form->input(
-                'special', 
-                array(
-                    'type' => 'checkbox',
-                    'div'=>array('class'=>'checkbox'),
-                    'class'=>false,
-                    'label'=>array(
-                        'class'=>false
-                    )
-                )
-            );
-
-            echo $this->Form->input(
-                'disambiguate', 
-                array(
-                    'type' => 'checkbox',
-                    'div'=>array('class'=>'checkbox'),
-                    'class'=>false,
-                    'label'=>array(
-                        'class'=>false
-                    )
-                )
-            ); 
-
-            echo $this->Form->submit(
-                 __d('contents', 'Submit'), 
-                 array(
-                     'div'=>array(
-                         'class'=>'form-group clearfix'
-                     ),
-                     'class'=>'btn btn-primary'
-                 )
-             ); 
-			
-            echo $this->Form->end();
-        ?>
-    </div>
-    <div class="col-md-10">
-        <?php if($string): ?>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2 class="panel-title">Your pseudo-random string</h2>
-            </div>
-            <div class="panel-body text-break">
-                <?php echo $string; ?>
-            </div>
-        </div>
-        <?php endif; ?>
-    </div>
 </div>
 
-<aside class="text-center well well-sm well-trans">
+<aside class="ad">
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- Leaderboard -->
 	<ins class="adsbygoogle"
